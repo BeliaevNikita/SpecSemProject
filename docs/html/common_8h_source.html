@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Распределённый табличный интеграл: Исходный файл common.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Распределённый табличный интеграл
+   </div>
+   <div id="projectbrief">Распределённое интегрирование методом прямоугольников через TCP на C</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('common_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">common.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="common_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef DISTRIBUTED_INTEGRAL_COMMON_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define DISTRIBUTED_INTEGRAL_COMMON_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="common_8h.html#a31d0fe8f8e2de5c00f47342e9ea66dbd">   15</a></span><span class="preprocessor">#define DEFAULT_HOST &quot;127.0.0.1&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="common_8h.html#a16b710f592bf8f7900666392adc444dc">   20</a></span><span class="preprocessor">#define DEFAULT_PORT &quot;1337&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="common_8h.html#a848750161824c5aa011ed0442ec0863c">   25</a></span><span class="preprocessor">#define LISTEN_BACKLOG 16</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557c">   36</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557cac457d7c8579132417f75fa2e5bc309b9">   39</a></span>    <a class="code hl_enumvalue" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557cac457d7c8579132417f75fa2e5bc309b9">MSG_HELLO</a> = 1,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557ca5f446b1a30fe8fd86d4468ddf702f1fc">   41</a></span>    <a class="code hl_enumvalue" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557ca5f446b1a30fe8fd86d4468ddf702f1fc">MSG_TASK</a> = 2,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557ca23bf0c0f4bacc4366a32e9ac775b29de">   43</a></span>    <a class="code hl_enumvalue" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557ca23bf0c0f4bacc4366a32e9ac775b29de">MSG_RESULT</a> = 3,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_enumvalue" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557cab067a4887f7e5193ec45c8bc7dc1b7b1">MSG_STOP</a> = 4</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557cab067a4887f7e5193ec45c8bc7dc1b7b1">   46</a></span>} <a class="code hl_enumeration" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557c">message_type_t</a>;</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structhello__msg__t.html">   51</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structhello__msg__t.html#ad026977e5c54b5c0b02395969cb2996b">   54</a></span>    uint32_t <a class="code hl_variable" href="structhello__msg__t.html#ad026977e5c54b5c0b02395969cb2996b">type</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structhello__msg__t.html#a41d6092a4d5a7b113c3ec7894787bf83">   56</a></span>    uint32_t <a class="code hl_variable" href="structhello__msg__t.html#a41d6092a4d5a7b113c3ec7894787bf83">cores</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structhello__msg__t.html#a35bc190fdd22c8871222d628d09cc19f">   58</a></span>    uint32_t <a class="code hl_variable" href="structhello__msg__t.html#a35bc190fdd22c8871222d628d09cc19f">worker_id</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>} <a class="code hl_struct" href="structhello__msg__t.html">hello_msg_t</a>;</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="};">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structtask__header__t.html">   67</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>{</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structtask__header__t.html#a0dfc28bf7a0978419b03c90bcd45eb79">   70</a></span>    uint32_t <a class="code hl_variable" href="structtask__header__t.html#a0dfc28bf7a0978419b03c90bcd45eb79">type</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structtask__header__t.html#a1c0a4b250c0335100acea106c656ed0b">   72</a></span>    uint32_t <a class="code hl_variable" href="structtask__header__t.html#a1c0a4b250c0335100acea106c656ed0b">task_id</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structtask__header__t.html#ac1d871fcdcb65f91fba7604145b10ce0">   74</a></span>    uint64_t <a class="code hl_variable" href="structtask__header__t.html#ac1d871fcdcb65f91fba7604145b10ce0">begin_idx</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structtask__header__t.html#a06dd3521c65cb6400c07dd262e294711">   76</a></span>    uint64_t <a class="code hl_variable" href="structtask__header__t.html#a06dd3521c65cb6400c07dd262e294711">end_idx</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="structtask__header__t.html#a8c4cf23634a09ebdc06b8f74befbbd2d">   78</a></span>    uint64_t <a class="code hl_variable" href="structtask__header__t.html#a8c4cf23634a09ebdc06b8f74befbbd2d">points_count</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>} <a class="code hl_struct" href="structtask__header__t.html">task_header_t</a>;</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="};">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structresult__msg__t.html">   84</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="structresult__msg__t.html#a4db96c519bc0eba4d71f0899ccd7fda2">   87</a></span>    uint32_t <a class="code hl_variable" href="structresult__msg__t.html#a4db96c519bc0eba4d71f0899ccd7fda2">type</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="structresult__msg__t.html#a4912fd3c2fee2486c39c6850f069b205">   89</a></span>    uint32_t <a class="code hl_variable" href="structresult__msg__t.html#a4912fd3c2fee2486c39c6850f069b205">task_id</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="structresult__msg__t.html#a416ac0535d8060802d8e17d0f83e91d4">   91</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structresult__msg__t.html#a416ac0535d8060802d8e17d0f83e91d4">partial_integral</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>} <a class="code hl_struct" href="structresult__msg__t.html">result_msg_t</a>;</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="};">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="structtable__points__t.html">   97</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="structtable__points__t.html#ac264b66eaf2848e140c9a28188568251">  100</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structtable__points__t.html#ac264b66eaf2848e140c9a28188568251">count</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="structtable__points__t.html#a088337341a1e43a9cc6637d2fca46fed">  102</a></span>    <span class="keywordtype">double</span>* <a class="code hl_variable" href="structtable__points__t.html#a088337341a1e43a9cc6637d2fca46fed">x</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="structtable__points__t.html#a6eeda55ca55aa84d87db5781d43df782">  104</a></span>    <span class="keywordtype">double</span>* <a class="code hl_variable" href="structtable__points__t.html#a6eeda55ca55aa84d87db5781d43df782">y</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>} <a class="code hl_struct" href="structtable__points__t.html">table_points_t</a>;</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="common_8h.html#a82dc6571fe12fd922143bbc3d8d19cfa">  115</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="common_8h.html#a82dc6571fe12fd922143bbc3d8d19cfa">parse_int_arg</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text, <span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">int</span> min_value);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="common_8h.html#a0c205cb2215532bc12a2aad2b8325e36">  124</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="common_8h.html#a0c205cb2215532bc12a2aad2b8325e36">parse_double_arg</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text, <span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="common_8h.html#ae8aa23e7b240ed7ff176e4ae78125939">  133</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="common_8h.html#ae8aa23e7b240ed7ff176e4ae78125939">read_full</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="common_8h.html#ad83e386965648fcedc83df3e289a37e4">  143</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="common_8h.html#ad83e386965648fcedc83df3e289a37e4">read_full_timeout</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> size, <span class="keywordtype">int</span> timeout_ms);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="common_8h.html#ac374bc1b2bc1901c20a8ec454fda76ee">  152</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="common_8h.html#ac374bc1b2bc1901c20a8ec454fda76ee">write_full</a>(<span class="keywordtype">int</span> fd, <span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="common_8h.html#aa130bf00df348aefda045195ace50901">  161</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="common_8h.html#aa130bf00df348aefda045195ace50901">enable_tcp_keepalive</a>(<span class="keywordtype">int</span> fd);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="common_8h.html#a39a7bdaa12551253d33056c5fe56c4b9">  169</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="common_8h.html#a39a7bdaa12551253d33056c5fe56c4b9">wait_readable</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">int</span> timeout_ms);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="common_8h.html#ad78792537fef6bf1afa84042d81989cf">  177</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="common_8h.html#ad78792537fef6bf1afa84042d81989cf">create_listen_socket</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* port);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="common_8h.html#a1a47cf8a546e7f6aaa7733646e6d1df9">  185</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="common_8h.html#a1a47cf8a546e7f6aaa7733646e6d1df9">connect_to_server</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* host, <span class="keyword">const</span> <span class="keywordtype">char</span>* port);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="common_8h.html#a3138caf7a7626cf5cd06b4ab1d4bf9e2">  193</a></span><a class="code hl_struct" href="structtable__points__t.html">table_points_t</a> <a class="code hl_function" href="common_8h.html#a3138caf7a7626cf5cd06b4ab1d4bf9e2">read_table_points</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="common_8h.html#a111e37600b5ddf58002d7998d9f6af31">  199</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="common_8h.html#a111e37600b5ddf58002d7998d9f6af31">free_table_points</a>(<a class="code hl_struct" href="structtable__points__t.html">table_points_t</a>* table);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="common_8h.html#a393fafacd35ea08b0ef9c2d27a010530">  205</a></span><span class="keywordtype">long</span> <a class="code hl_function" href="common_8h.html#a393fafacd35ea08b0ef9c2d27a010530">detect_cpu_count</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="common_8h.html#ae5d16c1021eaaf760e3b037d572edefb">  212</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="common_8h.html#ae5d16c1021eaaf760e3b037d572edefb">monotonic_seconds</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="common_8h.html#adf363a710923162f02f2edfee36b174a">  219</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="common_8h.html#adf363a710923162f02f2edfee36b174a">sleep_milliseconds</a>(<span class="keywordtype">long</span> milliseconds);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acommon_8h_html_a0c205cb2215532bc12a2aad2b8325e36"><div class="ttname"><a href="common_8h.html#a0c205cb2215532bc12a2aad2b8325e36">parse_double_arg</a></div><div class="ttdeci">double parse_double_arg(const char *text, const char *name)</div><div class="ttdoc">Разобрать аргумент командной строки типа double.</div></div>
+<div class="ttc" id="acommon_8h_html_a111e37600b5ddf58002d7998d9f6af31"><div class="ttname"><a href="common_8h.html#a111e37600b5ddf58002d7998d9f6af31">free_table_points</a></div><div class="ttdeci">void free_table_points(table_points_t *table)</div><div class="ttdoc">Освободить массивы, принадлежащие объекту table_points_t.</div></div>
+<div class="ttc" id="acommon_8h_html_a1a47cf8a546e7f6aaa7733646e6d1df9"><div class="ttname"><a href="common_8h.html#a1a47cf8a546e7f6aaa7733646e6d1df9">connect_to_server</a></div><div class="ttdeci">int connect_to_server(const char *host, const char *port)</div><div class="ttdoc">Подключиться к TCP-серверу.</div></div>
+<div class="ttc" id="acommon_8h_html_a3138caf7a7626cf5cd06b4ab1d4bf9e2"><div class="ttname"><a href="common_8h.html#a3138caf7a7626cf5cd06b4ab1d4bf9e2">read_table_points</a></div><div class="ttdeci">table_points_t read_table_points(const char *filename)</div><div class="ttdoc">Прочитать разделённую пробельными символами таблицу пар x y.</div></div>
+<div class="ttc" id="acommon_8h_html_a393fafacd35ea08b0ef9c2d27a010530"><div class="ttname"><a href="common_8h.html#a393fafacd35ea08b0ef9c2d27a010530">detect_cpu_count</a></div><div class="ttdeci">long detect_cpu_count(void)</div><div class="ttdoc">Определить число доступных CPU-ядер.</div></div>
+<div class="ttc" id="acommon_8h_html_a39a7bdaa12551253d33056c5fe56c4b9"><div class="ttname"><a href="common_8h.html#a39a7bdaa12551253d33056c5fe56c4b9">wait_readable</a></div><div class="ttdeci">int wait_readable(int fd, int timeout_ms)</div><div class="ttdoc">Дождаться готовности файлового дескриптора к чтению.</div></div>
+<div class="ttc" id="acommon_8h_html_a78b97fef55da786a15a849fd9d7e557c"><div class="ttname"><a href="common_8h.html#a78b97fef55da786a15a849fd9d7e557c">message_type_t</a></div><div class="ttdeci">message_type_t</div><div class="ttdoc">Идентификаторы сообщений бинарного протокола.</div><div class="ttdef"><b>Definition</b> common.h:37</div></div>
+<div class="ttc" id="acommon_8h_html_a78b97fef55da786a15a849fd9d7e557ca23bf0c0f4bacc4366a32e9ac775b29de"><div class="ttname"><a href="common_8h.html#a78b97fef55da786a15a849fd9d7e557ca23bf0c0f4bacc4366a32e9ac775b29de">MSG_RESULT</a></div><div class="ttdeci">@ MSG_RESULT</div><div class="ttdoc">Клиент возвращает частичный интеграл для задачи.</div><div class="ttdef"><b>Definition</b> common.h:43</div></div>
+<div class="ttc" id="acommon_8h_html_a78b97fef55da786a15a849fd9d7e557ca5f446b1a30fe8fd86d4468ddf702f1fc"><div class="ttname"><a href="common_8h.html#a78b97fef55da786a15a849fd9d7e557ca5f446b1a30fe8fd86d4468ddf702f1fc">MSG_TASK</a></div><div class="ttdeci">@ MSG_TASK</div><div class="ttdoc">Сервер отправляет одну задачу интегрирования и срез таблицы.</div><div class="ttdef"><b>Definition</b> common.h:41</div></div>
+<div class="ttc" id="acommon_8h_html_a78b97fef55da786a15a849fd9d7e557cab067a4887f7e5193ec45c8bc7dc1b7b1"><div class="ttname"><a href="common_8h.html#a78b97fef55da786a15a849fd9d7e557cab067a4887f7e5193ec45c8bc7dc1b7b1">MSG_STOP</a></div><div class="ttdeci">@ MSG_STOP</div><div class="ttdoc">Сервер просит клиента завершиться или подтверждает успешное выполнение.</div><div class="ttdef"><b>Definition</b> common.h:45</div></div>
+<div class="ttc" id="acommon_8h_html_a78b97fef55da786a15a849fd9d7e557cac457d7c8579132417f75fa2e5bc309b9"><div class="ttname"><a href="common_8h.html#a78b97fef55da786a15a849fd9d7e557cac457d7c8579132417f75fa2e5bc309b9">MSG_HELLO</a></div><div class="ttdeci">@ MSG_HELLO</div><div class="ttdoc">Клиент сообщает о себе и передаёт число ядер.</div><div class="ttdef"><b>Definition</b> common.h:39</div></div>
+<div class="ttc" id="acommon_8h_html_a82dc6571fe12fd922143bbc3d8d19cfa"><div class="ttname"><a href="common_8h.html#a82dc6571fe12fd922143bbc3d8d19cfa">parse_int_arg</a></div><div class="ttdeci">int parse_int_arg(const char *text, const char *name, int min_value)</div><div class="ttdoc">Разобрать целочисленный аргумент командной строки.</div></div>
+<div class="ttc" id="acommon_8h_html_aa130bf00df348aefda045195ace50901"><div class="ttname"><a href="common_8h.html#aa130bf00df348aefda045195ace50901">enable_tcp_keepalive</a></div><div class="ttdeci">int enable_tcp_keepalive(int fd)</div><div class="ttdoc">Включить TCP keepalive на подключённом сокете.</div></div>
+<div class="ttc" id="acommon_8h_html_ac374bc1b2bc1901c20a8ec454fda76ee"><div class="ttname"><a href="common_8h.html#ac374bc1b2bc1901c20a8ec454fda76ee">write_full</a></div><div class="ttdeci">int write_full(int fd, const void *buffer, size_t size)</div><div class="ttdoc">Записать ровно size байт в файловый дескриптор.</div></div>
+<div class="ttc" id="acommon_8h_html_ad78792537fef6bf1afa84042d81989cf"><div class="ttname"><a href="common_8h.html#ad78792537fef6bf1afa84042d81989cf">create_listen_socket</a></div><div class="ttdeci">int create_listen_socket(const char *port)</div><div class="ttdoc">Создать TCP-сокет сервера, привязать его и начать прослушивание.</div></div>
+<div class="ttc" id="acommon_8h_html_ad83e386965648fcedc83df3e289a37e4"><div class="ttname"><a href="common_8h.html#ad83e386965648fcedc83df3e289a37e4">read_full_timeout</a></div><div class="ttdeci">int read_full_timeout(int fd, void *buffer, size_t size, int timeout_ms)</div><div class="ttdoc">Прочитать ровно size байт с ограничением времени ожидания.</div></div>
+<div class="ttc" id="acommon_8h_html_adf363a710923162f02f2edfee36b174a"><div class="ttname"><a href="common_8h.html#adf363a710923162f02f2edfee36b174a">sleep_milliseconds</a></div><div class="ttdeci">void sleep_milliseconds(long milliseconds)</div><div class="ttdoc">Уснуть минимум на заданное число миллисекунд.</div></div>
+<div class="ttc" id="acommon_8h_html_ae5d16c1021eaaf760e3b037d572edefb"><div class="ttname"><a href="common_8h.html#ae5d16c1021eaaf760e3b037d572edefb">monotonic_seconds</a></div><div class="ttdeci">double monotonic_seconds(void)</div><div class="ttdoc">Получить монотонное время в секундах.</div></div>
+<div class="ttc" id="acommon_8h_html_ae8aa23e7b240ed7ff176e4ae78125939"><div class="ttname"><a href="common_8h.html#ae8aa23e7b240ed7ff176e4ae78125939">read_full</a></div><div class="ttdeci">int read_full(int fd, void *buffer, size_t size)</div><div class="ttdoc">Прочитать ровно size байт из файлового дескриптора.</div></div>
+<div class="ttc" id="astructhello__msg__t_html"><div class="ttname"><a href="structhello__msg__t.html">hello_msg_t</a></div><div class="ttdoc">Приветственное сообщение от клиента серверу.</div><div class="ttdef"><b>Definition</b> common.h:52</div></div>
+<div class="ttc" id="astructhello__msg__t_html_a35bc190fdd22c8871222d628d09cc19f"><div class="ttname"><a href="structhello__msg__t.html#a35bc190fdd22c8871222d628d09cc19f">hello_msg_t::worker_id</a></div><div class="ttdeci">uint32_t worker_id</div><div class="ttdoc">Необязательный стабильный id worker-а или UINT32_MAX, если слот выбирает сервер.</div><div class="ttdef"><b>Definition</b> common.h:58</div></div>
+<div class="ttc" id="astructhello__msg__t_html_a41d6092a4d5a7b113c3ec7894787bf83"><div class="ttname"><a href="structhello__msg__t.html#a41d6092a4d5a7b113c3ec7894787bf83">hello_msg_t::cores</a></div><div class="ttdeci">uint32_t cores</div><div class="ttdoc">Число CPU-ядер worker-а, используемое сервером как вес при разбиении работы.</div><div class="ttdef"><b>Definition</b> common.h:56</div></div>
+<div class="ttc" id="astructhello__msg__t_html_ad026977e5c54b5c0b02395969cb2996b"><div class="ttname"><a href="structhello__msg__t.html#ad026977e5c54b5c0b02395969cb2996b">hello_msg_t::type</a></div><div class="ttdeci">uint32_t type</div><div class="ttdoc">Тип сообщения, должен быть MSG_HELLO.</div><div class="ttdef"><b>Definition</b> common.h:54</div></div>
+<div class="ttc" id="astructresult__msg__t_html"><div class="ttname"><a href="structresult__msg__t.html">result_msg_t</a></div><div class="ttdoc">Сообщение с результатом задачи от клиента серверу.</div><div class="ttdef"><b>Definition</b> common.h:85</div></div>
+<div class="ttc" id="astructresult__msg__t_html_a416ac0535d8060802d8e17d0f83e91d4"><div class="ttname"><a href="structresult__msg__t.html#a416ac0535d8060802d8e17d0f83e91d4">result_msg_t::partial_integral</a></div><div class="ttdeci">double partial_integral</div><div class="ttdoc">Частичный интеграл методом прямоугольников, вычисленный worker-ом.</div><div class="ttdef"><b>Definition</b> common.h:91</div></div>
+<div class="ttc" id="astructresult__msg__t_html_a4912fd3c2fee2486c39c6850f069b205"><div class="ttname"><a href="structresult__msg__t.html#a4912fd3c2fee2486c39c6850f069b205">result_msg_t::task_id</a></div><div class="ttdeci">uint32_t task_id</div><div class="ttdoc">Идентификатор завершённой задачи.</div><div class="ttdef"><b>Definition</b> common.h:89</div></div>
+<div class="ttc" id="astructresult__msg__t_html_a4db96c519bc0eba4d71f0899ccd7fda2"><div class="ttname"><a href="structresult__msg__t.html#a4db96c519bc0eba4d71f0899ccd7fda2">result_msg_t::type</a></div><div class="ttdeci">uint32_t type</div><div class="ttdoc">Тип сообщения, должен быть MSG_RESULT.</div><div class="ttdef"><b>Definition</b> common.h:87</div></div>
+<div class="ttc" id="astructtable__points__t_html"><div class="ttname"><a href="structtable__points__t.html">table_points_t</a></div><div class="ttdoc">Таблица точек функции x/y в памяти.</div><div class="ttdef"><b>Definition</b> common.h:98</div></div>
+<div class="ttc" id="astructtable__points__t_html_a088337341a1e43a9cc6637d2fca46fed"><div class="ttname"><a href="structtable__points__t.html#a088337341a1e43a9cc6637d2fca46fed">table_points_t::x</a></div><div class="ttdeci">double * x</div><div class="ttdoc">Координаты x, прочитанные из файла таблицы.</div><div class="ttdef"><b>Definition</b> common.h:102</div></div>
+<div class="ttc" id="astructtable__points__t_html_a6eeda55ca55aa84d87db5781d43df782"><div class="ttname"><a href="structtable__points__t.html#a6eeda55ca55aa84d87db5781d43df782">table_points_t::y</a></div><div class="ttdeci">double * y</div><div class="ttdoc">Координаты y, прочитанные из файла таблицы.</div><div class="ttdef"><b>Definition</b> common.h:104</div></div>
+<div class="ttc" id="astructtable__points__t_html_ac264b66eaf2848e140c9a28188568251"><div class="ttname"><a href="structtable__points__t.html#ac264b66eaf2848e140c9a28188568251">table_points_t::count</a></div><div class="ttdeci">size_t count</div><div class="ttdoc">Число действительных элементов в массивах x и y.</div><div class="ttdef"><b>Definition</b> common.h:100</div></div>
+<div class="ttc" id="astructtask__header__t_html"><div class="ttname"><a href="structtask__header__t.html">task_header_t</a></div><div class="ttdoc">Заголовок задачи от сервера клиенту.</div><div class="ttdef"><b>Definition</b> common.h:68</div></div>
+<div class="ttc" id="astructtask__header__t_html_a06dd3521c65cb6400c07dd262e294711"><div class="ttname"><a href="structtask__header__t.html#a06dd3521c65cb6400c07dd262e294711">task_header_t::end_idx</a></div><div class="ttdeci">uint64_t end_idx</div><div class="ttdoc">Индекс за последним глобальным прямоугольником задачи.</div><div class="ttdef"><b>Definition</b> common.h:76</div></div>
+<div class="ttc" id="astructtask__header__t_html_a0dfc28bf7a0978419b03c90bcd45eb79"><div class="ttname"><a href="structtask__header__t.html#a0dfc28bf7a0978419b03c90bcd45eb79">task_header_t::type</a></div><div class="ttdeci">uint32_t type</div><div class="ttdoc">Тип сообщения, обычно MSG_TASK или MSG_STOP.</div><div class="ttdef"><b>Definition</b> common.h:70</div></div>
+<div class="ttc" id="astructtask__header__t_html_a1c0a4b250c0335100acea106c656ed0b"><div class="ttname"><a href="structtask__header__t.html#a1c0a4b250c0335100acea106c656ed0b">task_header_t::task_id</a></div><div class="ttdeci">uint32_t task_id</div><div class="ttdoc">Идентификатор задачи, который worker возвращает в result_msg_t.</div><div class="ttdef"><b>Definition</b> common.h:72</div></div>
+<div class="ttc" id="astructtask__header__t_html_a8c4cf23634a09ebdc06b8f74befbbd2d"><div class="ttname"><a href="structtask__header__t.html#a8c4cf23634a09ebdc06b8f74befbbd2d">task_header_t::points_count</a></div><div class="ttdeci">uint64_t points_count</div><div class="ttdoc">Число точек x/y, отправленных после этого заголовка.</div><div class="ttdef"><b>Definition</b> common.h:78</div></div>
+<div class="ttc" id="astructtask__header__t_html_ac1d871fcdcb65f91fba7604145b10ce0"><div class="ttname"><a href="structtask__header__t.html#ac1d871fcdcb65f91fba7604145b10ce0">task_header_t::begin_idx</a></div><div class="ttdeci">uint64_t begin_idx</div><div class="ttdoc">Первый глобальный индекс прямоугольника, входящий в задачу.</div><div class="ttdef"><b>Definition</b> common.h:74</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="common_8h.html">common.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

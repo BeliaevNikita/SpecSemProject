@@ -1,0 +1,31 @@
+PROJECT_NAME           = "Распределённый табличный интеграл"
+PROJECT_BRIEF          = "Распределённое интегрирование методом прямоугольников через TCP на C"
+OUTPUT_LANGUAGE        = Russian
+OUTPUT_DIRECTORY       = docs
+HTML_OUTPUT            = html
+
+INPUT                  = README.md \
+                         docs/mainpage.dox \
+                         common.h \
+                         distributed.h
+FILE_PATTERNS          = *.h *.c *.dox *.md
+RECURSIVE              = NO
+
+EXTRACT_ALL            = NO
+EXTRACT_STATIC         = NO
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_TREEVIEW      = YES
+FULL_PATH_NAMES        = NO
+STRIP_FROM_PATH        = .
+
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = NO
+MARKDOWN_SUPPORT       = YES
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = YES

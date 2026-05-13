@@ -1,0 +1,8 @@
+server: injected failure after sending tasks
+server: listening on port 1343, need 3 workers
+server: worker 2 connected, cores=1
+server: worker 0 connected, cores=1
+server: worker 1 connected, cores=1
+server: sent task 0 [0, 33333)
+server: sent task 1 [33333, 66666)
+server: sent task 2 [66666, 99999)

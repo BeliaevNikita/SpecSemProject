@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Распределённый табличный интеграл: Файл common.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Распределённый табличный интеграл
+   </div>
+   <div id="projectbrief">Распределённое интегрирование методом прямоугольников через TCP на C</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('common_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл common.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Публичный API протокола, таблиц и сетевых функций библиотеки распределённого интеграла.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для common.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="common_8h__incl.png" border="0" usemap="#acommon_8h" alt=""/></div>
+<map name="acommon_8h" id="acommon_8h">
+<area shape="rect" title="Публичный API протокола, таблиц и сетевых функций библиотеки распределённого интеграла." alt="" coords="45,5,136,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,80,104"/>
+<area shape="poly" title=" " alt="" coords="85,33,60,69,56,66,81,30"/>
+<area shape="rect" title=" " alt="" coords="105,79,175,104"/>
+<area shape="poly" title=" " alt="" coords="101,29,126,66,122,69,97,33"/>
+</map>
+</div>
+</div>
+<p><a href="common_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhello__msg__t.html">hello_msg_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приветственное сообщение от клиента серверу.  <a href="structhello__msg__t.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtask__header__t.html">task_header_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заголовок задачи от сервера клиенту.  <a href="structtask__header__t.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structresult__msg__t.html">result_msg_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сообщение с результатом задачи от клиента серверу.  <a href="structresult__msg__t.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtable__points__t.html">table_points_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таблица точек функции x/y в памяти.  <a href="structtable__points__t.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a31d0fe8f8e2de5c00f47342e9ea66dbd" id="r_a31d0fe8f8e2de5c00f47342e9ea66dbd"><td class="memItemLeft" align="right" valign="top"><a id="a31d0fe8f8e2de5c00f47342e9ea66dbd" name="a31d0fe8f8e2de5c00f47342e9ea66dbd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_HOST</b>&#160;&#160;&#160;&quot;127.0.0.1&quot;</td></tr>
+<tr class="memdesc:a31d0fe8f8e2de5c00f47342e9ea66dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Адрес loopback по умолчанию для локальных клиентов. <br /></td></tr>
+<tr class="separator:a31d0fe8f8e2de5c00f47342e9ea66dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b710f592bf8f7900666392adc444dc" id="r_a16b710f592bf8f7900666392adc444dc"><td class="memItemLeft" align="right" valign="top"><a id="a16b710f592bf8f7900666392adc444dc" name="a16b710f592bf8f7900666392adc444dc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_PORT</b>&#160;&#160;&#160;&quot;1337&quot;</td></tr>
+<tr class="memdesc:a16b710f592bf8f7900666392adc444dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP-порт по умолчанию для примеров запуска. <br /></td></tr>
+<tr class="separator:a16b710f592bf8f7900666392adc444dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a848750161824c5aa011ed0442ec0863c" id="r_a848750161824c5aa011ed0442ec0863c"><td class="memItemLeft" align="right" valign="top"><a id="a848750161824c5aa011ed0442ec0863c" name="a848750161824c5aa011ed0442ec0863c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LISTEN_BACKLOG</b>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:a848750161824c5aa011ed0442ec0863c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимальное число ожидающих TCP-подключений для серверного сокета. <br /></td></tr>
+<tr class="separator:a848750161824c5aa011ed0442ec0863c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a78b97fef55da786a15a849fd9d7e557c" id="r_a78b97fef55da786a15a849fd9d7e557c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557c">message_type_t</a> { <a class="el" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557cac457d7c8579132417f75fa2e5bc309b9">MSG_HELLO</a> = 1
+, <a class="el" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557ca5f446b1a30fe8fd86d4468ddf702f1fc">MSG_TASK</a> = 2
+, <a class="el" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557ca23bf0c0f4bacc4366a32e9ac775b29de">MSG_RESULT</a> = 3
+, <a class="el" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557cab067a4887f7e5193ec45c8bc7dc1b7b1">MSG_STOP</a> = 4
+ }</td></tr>
+<tr class="memdesc:a78b97fef55da786a15a849fd9d7e557c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Идентификаторы сообщений бинарного протокола.  <a href="common_8h.html#a78b97fef55da786a15a849fd9d7e557c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a78b97fef55da786a15a849fd9d7e557c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a82dc6571fe12fd922143bbc3d8d19cfa" id="r_a82dc6571fe12fd922143bbc3d8d19cfa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a82dc6571fe12fd922143bbc3d8d19cfa">parse_int_arg</a> (const char *text, const char *name, int min_value)</td></tr>
+<tr class="memdesc:a82dc6571fe12fd922143bbc3d8d19cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разобрать целочисленный аргумент командной строки.  <br /></td></tr>
+<tr class="separator:a82dc6571fe12fd922143bbc3d8d19cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c205cb2215532bc12a2aad2b8325e36" id="r_a0c205cb2215532bc12a2aad2b8325e36"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a0c205cb2215532bc12a2aad2b8325e36">parse_double_arg</a> (const char *text, const char *name)</td></tr>
+<tr class="memdesc:a0c205cb2215532bc12a2aad2b8325e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разобрать аргумент командной строки типа double.  <br /></td></tr>
+<tr class="separator:a0c205cb2215532bc12a2aad2b8325e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8aa23e7b240ed7ff176e4ae78125939" id="r_ae8aa23e7b240ed7ff176e4ae78125939"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#ae8aa23e7b240ed7ff176e4ae78125939">read_full</a> (int fd, void *buffer, size_t size)</td></tr>
+<tr class="memdesc:ae8aa23e7b240ed7ff176e4ae78125939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прочитать ровно size байт из файлового дескриптора.  <br /></td></tr>
+<tr class="separator:ae8aa23e7b240ed7ff176e4ae78125939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83e386965648fcedc83df3e289a37e4" id="r_ad83e386965648fcedc83df3e289a37e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#ad83e386965648fcedc83df3e289a37e4">read_full_timeout</a> (int fd, void *buffer, size_t size, int timeout_ms)</td></tr>
+<tr class="memdesc:ad83e386965648fcedc83df3e289a37e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прочитать ровно size байт с ограничением времени ожидания.  <br /></td></tr>
+<tr class="separator:ad83e386965648fcedc83df3e289a37e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac374bc1b2bc1901c20a8ec454fda76ee" id="r_ac374bc1b2bc1901c20a8ec454fda76ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#ac374bc1b2bc1901c20a8ec454fda76ee">write_full</a> (int fd, const void *buffer, size_t size)</td></tr>
+<tr class="memdesc:ac374bc1b2bc1901c20a8ec454fda76ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записать ровно size байт в файловый дескриптор.  <br /></td></tr>
+<tr class="separator:ac374bc1b2bc1901c20a8ec454fda76ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa130bf00df348aefda045195ace50901" id="r_aa130bf00df348aefda045195ace50901"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#aa130bf00df348aefda045195ace50901">enable_tcp_keepalive</a> (int fd)</td></tr>
+<tr class="memdesc:aa130bf00df348aefda045195ace50901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Включить TCP keepalive на подключённом сокете.  <br /></td></tr>
+<tr class="separator:aa130bf00df348aefda045195ace50901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a7bdaa12551253d33056c5fe56c4b9" id="r_a39a7bdaa12551253d33056c5fe56c4b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a39a7bdaa12551253d33056c5fe56c4b9">wait_readable</a> (int fd, int timeout_ms)</td></tr>
+<tr class="memdesc:a39a7bdaa12551253d33056c5fe56c4b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дождаться готовности файлового дескриптора к чтению.  <br /></td></tr>
+<tr class="separator:a39a7bdaa12551253d33056c5fe56c4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78792537fef6bf1afa84042d81989cf" id="r_ad78792537fef6bf1afa84042d81989cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#ad78792537fef6bf1afa84042d81989cf">create_listen_socket</a> (const char *port)</td></tr>
+<tr class="memdesc:ad78792537fef6bf1afa84042d81989cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать TCP-сокет сервера, привязать его и начать прослушивание.  <br /></td></tr>
+<tr class="separator:ad78792537fef6bf1afa84042d81989cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a47cf8a546e7f6aaa7733646e6d1df9" id="r_a1a47cf8a546e7f6aaa7733646e6d1df9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a1a47cf8a546e7f6aaa7733646e6d1df9">connect_to_server</a> (const char *host, const char *port)</td></tr>
+<tr class="memdesc:a1a47cf8a546e7f6aaa7733646e6d1df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подключиться к TCP-серверу.  <br /></td></tr>
+<tr class="separator:a1a47cf8a546e7f6aaa7733646e6d1df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3138caf7a7626cf5cd06b4ab1d4bf9e2" id="r_a3138caf7a7626cf5cd06b4ab1d4bf9e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtable__points__t.html">table_points_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a3138caf7a7626cf5cd06b4ab1d4bf9e2">read_table_points</a> (const char *filename)</td></tr>
+<tr class="memdesc:a3138caf7a7626cf5cd06b4ab1d4bf9e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прочитать разделённую пробельными символами таблицу пар x y.  <br /></td></tr>
+<tr class="separator:a3138caf7a7626cf5cd06b4ab1d4bf9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a111e37600b5ddf58002d7998d9f6af31" id="r_a111e37600b5ddf58002d7998d9f6af31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a111e37600b5ddf58002d7998d9f6af31">free_table_points</a> (<a class="el" href="structtable__points__t.html">table_points_t</a> *table)</td></tr>
+<tr class="memdesc:a111e37600b5ddf58002d7998d9f6af31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Освободить массивы, принадлежащие объекту <a class="el" href="structtable__points__t.html" title="Таблица точек функции x/y в памяти.">table_points_t</a>.  <br /></td></tr>
+<tr class="separator:a111e37600b5ddf58002d7998d9f6af31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a393fafacd35ea08b0ef9c2d27a010530" id="r_a393fafacd35ea08b0ef9c2d27a010530"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a393fafacd35ea08b0ef9c2d27a010530">detect_cpu_count</a> (void)</td></tr>
+<tr class="memdesc:a393fafacd35ea08b0ef9c2d27a010530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определить число доступных CPU-ядер.  <br /></td></tr>
+<tr class="separator:a393fafacd35ea08b0ef9c2d27a010530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d16c1021eaaf760e3b037d572edefb" id="r_ae5d16c1021eaaf760e3b037d572edefb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#ae5d16c1021eaaf760e3b037d572edefb">monotonic_seconds</a> (void)</td></tr>
+<tr class="memdesc:ae5d16c1021eaaf760e3b037d572edefb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить монотонное время в секундах.  <br /></td></tr>
+<tr class="separator:ae5d16c1021eaaf760e3b037d572edefb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf363a710923162f02f2edfee36b174a" id="r_adf363a710923162f02f2edfee36b174a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#adf363a710923162f02f2edfee36b174a">sleep_milliseconds</a> (long milliseconds)</td></tr>
+<tr class="memdesc:adf363a710923162f02f2edfee36b174a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уснуть минимум на заданное число миллисекунд.  <br /></td></tr>
+<tr class="separator:adf363a710923162f02f2edfee36b174a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Публичный API протокола, таблиц и сетевых функций библиотеки распределённого интеграла. </p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a78b97fef55da786a15a849fd9d7e557c" name="a78b97fef55da786a15a849fd9d7e557c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78b97fef55da786a15a849fd9d7e557c">&#9670;&#160;</a></span>message_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="common_8h.html#a78b97fef55da786a15a849fd9d7e557c">message_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Идентификаторы сообщений бинарного протокола. </p>
+<p>Тип сообщения хранится первым полем в каждой структуре протокола.</p>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Протокол отправляет нативные структуры C и значения double без преобразования порядка байт, поэтому в этом учебном проекте он рассчитан на однородные хосты. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a78b97fef55da786a15a849fd9d7e557cac457d7c8579132417f75fa2e5bc309b9" name="a78b97fef55da786a15a849fd9d7e557cac457d7c8579132417f75fa2e5bc309b9"></a>MSG_HELLO&#160;</td><td class="fielddoc"><p>Клиент сообщает о себе и передаёт число ядер. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a78b97fef55da786a15a849fd9d7e557ca5f446b1a30fe8fd86d4468ddf702f1fc" name="a78b97fef55da786a15a849fd9d7e557ca5f446b1a30fe8fd86d4468ddf702f1fc"></a>MSG_TASK&#160;</td><td class="fielddoc"><p>Сервер отправляет одну задачу интегрирования и срез таблицы. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a78b97fef55da786a15a849fd9d7e557ca23bf0c0f4bacc4366a32e9ac775b29de" name="a78b97fef55da786a15a849fd9d7e557ca23bf0c0f4bacc4366a32e9ac775b29de"></a>MSG_RESULT&#160;</td><td class="fielddoc"><p>Клиент возвращает частичный интеграл для задачи. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a78b97fef55da786a15a849fd9d7e557cab067a4887f7e5193ec45c8bc7dc1b7b1" name="a78b97fef55da786a15a849fd9d7e557cab067a4887f7e5193ec45c8bc7dc1b7b1"></a>MSG_STOP&#160;</td><td class="fielddoc"><p>Сервер просит клиента завершиться или подтверждает успешное выполнение. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a1a47cf8a546e7f6aaa7733646e6d1df9" name="a1a47cf8a546e7f6aaa7733646e6d1df9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a47cf8a546e7f6aaa7733646e6d1df9">&#9670;&#160;</a></span>connect_to_server()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int connect_to_server </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подключиться к TCP-серверу. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>Имя хоста сервера или IPv4-адрес. </td></tr>
+    <tr><td class="paramname">port</td><td>TCP-порт в виде десятичной строки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Файловый дескриптор подключённого сокета или -1, если все попытки подключения не удались. </dd></dl>
+
+</div>
+</div>
+<a id="ad78792537fef6bf1afa84042d81989cf" name="ad78792537fef6bf1afa84042d81989cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78792537fef6bf1afa84042d81989cf">&#9670;&#160;</a></span>create_listen_socket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int create_listen_socket </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создать TCP-сокет сервера, привязать его и начать прослушивание. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>TCP-порт в виде десятичной строки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Файловый дескриптор слушающего сокета. </dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Завершает процесс с EXIT_FAILURE, если сокет нельзя создать. </dd></dl>
+
+</div>
+</div>
+<a id="a393fafacd35ea08b0ef9c2d27a010530" name="a393fafacd35ea08b0ef9c2d27a010530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a393fafacd35ea08b0ef9c2d27a010530">&#9670;&#160;</a></span>detect_cpu_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long detect_cpu_count </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Определить число доступных CPU-ядер. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Положительное число доступных ядер или 1, если определение не удалось. </dd></dl>
+
+</div>
+</div>
+<a id="aa130bf00df348aefda045195ace50901" name="aa130bf00df348aefda045195ace50901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa130bf00df348aefda045195ace50901">&#9670;&#160;</a></span>enable_tcp_keepalive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int enable_tcp_keepalive </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Включить TCP keepalive на подключённом сокете. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>Файловый дескриптор TCP-сокета. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 при успехе, -1 при ошибке setsockopt(). </dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>TCP keepalive является дополнительной страховкой. В проекте быстрые отказы отслеживаются прикладными таймаутами чтения, подключения и ожидания. </dd></dl>
+
+</div>
+</div>
+<a id="a111e37600b5ddf58002d7998d9f6af31" name="a111e37600b5ddf58002d7998d9f6af31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111e37600b5ddf58002d7998d9f6af31">&#9670;&#160;</a></span>free_table_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_table_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtable__points__t.html">table_points_t</a> *&#160;</td>
+          <td class="paramname"><em>table</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Освободить массивы, принадлежащие объекту <a class="el" href="structtable__points__t.html" title="Таблица точек функции x/y в памяти.">table_points_t</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">table</td><td>Таблица, возвращённая <a class="el" href="common_8h.html#a3138caf7a7626cf5cd06b4ab1d4bf9e2" title="Прочитать разделённую пробельными символами таблицу пар x y.">read_table_points()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae5d16c1021eaaf760e3b037d572edefb" name="ae5d16c1021eaaf760e3b037d572edefb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d16c1021eaaf760e3b037d572edefb">&#9670;&#160;</a></span>monotonic_seconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double monotonic_seconds </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить монотонное время в секундах. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Секунды от CLOCK_MONOTONIC в виде double. </dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Завершает процесс с EXIT_FAILURE, если clock_gettime() завершилась ошибкой. </dd></dl>
+
+</div>
+</div>
+<a id="a0c205cb2215532bc12a2aad2b8325e36" name="a0c205cb2215532bc12a2aad2b8325e36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c205cb2215532bc12a2aad2b8325e36">&#9670;&#160;</a></span>parse_double_arg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double parse_double_arg </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Разобрать аргумент командной строки типа double. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Строка для разбора. </td></tr>
+    <tr><td class="paramname">name</td><td>Человекочитаемое имя аргумента для диагностических сообщений. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Разобранное значение double. </dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>При некорректном вводе завершает процесс с EXIT_FAILURE. </dd></dl>
+
+</div>
+</div>
+<a id="a82dc6571fe12fd922143bbc3d8d19cfa" name="a82dc6571fe12fd922143bbc3d8d19cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82dc6571fe12fd922143bbc3d8d19cfa">&#9670;&#160;</a></span>parse_int_arg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parse_int_arg </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Разобрать целочисленный аргумент командной строки. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Строка для разбора. </td></tr>
+    <tr><td class="paramname">name</td><td>Человекочитаемое имя аргумента для диагностических сообщений. </td></tr>
+    <tr><td class="paramname">min_value</td><td>Минимально допустимое значение. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Разобранное целочисленное значение. </dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>При некорректном вводе завершает процесс с EXIT_FAILURE. </dd></dl>
+
+</div>
+</div>
+<a id="ae8aa23e7b240ed7ff176e4ae78125939" name="ae8aa23e7b240ed7ff176e4ae78125939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8aa23e7b240ed7ff176e4ae78125939">&#9670;&#160;</a></span>read_full()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int read_full </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прочитать ровно size байт из файлового дескриптора. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>Файловый дескриптор для чтения. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Буфер назначения. </td></tr>
+    <tr><td class="paramname">size</td><td>Число байт для чтения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>1 при успехе, 0 при EOF до заполнения буфера, -1 при системной ошибке. </dd></dl>
+
+</div>
+</div>
+<a id="ad83e386965648fcedc83df3e289a37e4" name="ad83e386965648fcedc83df3e289a37e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad83e386965648fcedc83df3e289a37e4">&#9670;&#160;</a></span>read_full_timeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int read_full_timeout </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прочитать ровно size байт с ограничением времени ожидания. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>Файловый дескриптор для чтения. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Буфер назначения. </td></tr>
+    <tr><td class="paramname">size</td><td>Число байт для чтения. </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>Максимальное время ожидания в миллисекундах, 0 означает без таймаута. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>1 при успехе, 0 при EOF или таймауте до заполнения буфера, -1 при системной ошибке. </dd></dl>
+
+</div>
+</div>
+<a id="a3138caf7a7626cf5cd06b4ab1d4bf9e2" name="a3138caf7a7626cf5cd06b4ab1d4bf9e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3138caf7a7626cf5cd06b4ab1d4bf9e2">&#9670;&#160;</a></span>read_table_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtable__points__t.html">table_points_t</a> read_table_points </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прочитать разделённую пробельными символами таблицу пар x y. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Путь к текстовому файлу, где в каждой строке хранится пара "x y". </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Выделенная <a class="el" href="structtable__points__t.html" title="Таблица точек функции x/y в памяти.">table_points_t</a>. Освобождается через <a class="el" href="common_8h.html#a111e37600b5ddf58002d7998d9f6af31" title="Освободить массивы, принадлежащие объекту table_points_t.">free_table_points()</a>. </dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>При ошибках ввода-вывода, выделения памяти или формата завершает процесс с EXIT_FAILURE. </dd></dl>
+
+</div>
+</div>
+<a id="adf363a710923162f02f2edfee36b174a" name="adf363a710923162f02f2edfee36b174a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf363a710923162f02f2edfee36b174a">&#9670;&#160;</a></span>sleep_milliseconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sleep_milliseconds </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>milliseconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уснуть минимум на заданное число миллисекунд. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">milliseconds</td><td>Длительность задержки в миллисекундах. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Завершает процесс с EXIT_FAILURE, если nanosleep() завершилась ошибкой по причине, отличной от EINTR. </dd></dl>
+
+</div>
+</div>
+<a id="a39a7bdaa12551253d33056c5fe56c4b9" name="a39a7bdaa12551253d33056c5fe56c4b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39a7bdaa12551253d33056c5fe56c4b9">&#9670;&#160;</a></span>wait_readable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wait_readable </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дождаться готовности файлового дескриптора к чтению. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>Файловый дескриптор. </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>Максимальное время ожидания в миллисекундах, 0 означает без таймаута. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>1 если дескриптор готов, 0 при таймауте, -1 при ошибке poll(). </dd></dl>
+
+</div>
+</div>
+<a id="ac374bc1b2bc1901c20a8ec454fda76ee" name="ac374bc1b2bc1901c20a8ec454fda76ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac374bc1b2bc1901c20a8ec454fda76ee">&#9670;&#160;</a></span>write_full()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int write_full </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Записать ровно size байт в файловый дескриптор. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>Файловый дескриптор для записи. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Исходный буфер. </td></tr>
+    <tr><td class="paramname">size</td><td>Число байт для записи. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>1 при успехе, -1 при системной ошибке. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="common_8h.html">common.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

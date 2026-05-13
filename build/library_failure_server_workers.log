@@ -1,0 +1,75 @@
+client: unable to read completion ack from server
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: wait for server 127.0.0.1:1343
+client[47341]: connected, worker_id=0, cores=1
+client: unable to read completion ack from server
+library_workers: worker 0 failed
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: wait for server 127.0.0.1:1343
+client[47342]: connected, worker_id=1, cores=1
+client: unable to read completion ack from server
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: wait for server 127.0.0.1:1343
+client[47343]: connected, worker_id=2, cores=1
+library_workers: worker 1 failed
+library_workers: worker 2 failed

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Распределённый табличный интеграл: Распределённый табличный интеграл</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Распределённый табличный интеграл
+   </div>
+   <div id="projectbrief">Распределённое интегрирование методом прямоугольников через TCP на C</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('md_README.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Распределённый табличный интеграл</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> Минимальный пример TCP-связки:</p>
+<ul>
+<li><code>integral</code> генерирует файл точек функции и запускает несколько <code>client</code>, затем <code>server</code>;</li>
+<li><code>client</code> ждёт сервер, сообщает число ядер, принимает одну задачу, делит её между POSIX threads, печатает время локального расчёта и возвращает частичную сумму;</li>
+<li><code>server</code> принимает все подключения, делит интервалы между worker по числу ядер, рассылает точки и печатает итог;</li>
+<li><code>server</code> и <code>integral</code> печатают wall-clock время работы.</li>
+</ul>
+<p><code>client.c</code> и <code>server.c</code> собираются в статическую библиотеку <code>build/libdistributed_integral.a</code>. Отдельные программы <code>build/client</code> и <code>build/server</code> являются тонкими wrapper-ами, а <code>integral</code>/<code>integral2</code> линкуются с этой же библиотекой и вызывают серверный/клиентский код напрямую.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Протокол</h1>
+<p>Все сообщения бинарные:</p>
+<ul>
+<li><code>HELLO</code>: <code>type</code>, <code>cores</code>, <code>worker_id</code>;</li>
+<li><code>TASK</code>: <code>type</code>, <code>task_id</code>, <code>begin_idx</code>, <code>end_idx</code>, <code>points_count</code>, затем <code>x[]</code>, затем <code>y[]</code>;</li>
+<li><code>RESULT</code>: <code>type</code>, <code>task_id</code>, <code>partial_integral</code>;</li>
+<li><code>STOP</code>: используется, если worker не достался непустой диапазон, а также как финальное подтверждение после успешного получения результата.</li>
+</ul>
+<p>Диапазон <code>[begin_idx, end_idx)</code> относится к индексам прямоугольников. Для него передаётся <code>end_idx - begin_idx + 1</code> точек, потому что worker считает <code>y[i] * (x[i + 1] - x[i])</code>.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Сборка и запуск</h1>
+<div class="fragment"><div class="line">make</div>
+<div class="line">make run</div>
+</div><!-- fragment --><p>При сборке <code>integral</code> библиотека явно передаётся линкеру:</p>
+<div class="fragment"><div class="line">gcc ... integral.c build/libdistributed_integral.a -o build/integral ...</div>
+</div><!-- fragment --><p>Сборка с динамическим анализом:</p>
+<div class="fragment"><div class="line">make asan</div>
+<div class="line">make ubsan</div>
+<div class="line">make msan</div>
+</div><!-- fragment --><p>Или напрямую:</p>
+<div class="fragment"><div class="line">make clean &amp;&amp; make SAN=address</div>
+<div class="line">make clean &amp;&amp; make SAN=undefined</div>
+<div class="line">make clean &amp;&amp; make SAN=memory</div>
+</div><!-- fragment --><p><code>MemorySanitizer</code> собирается через <code>clang</code>.</p>
+<p>Сборка через Clang без sanitizer:</p>
+<div class="fragment"><div class="line">make clang</div>
+</div><!-- fragment --><p>Статический анализ:</p>
+<div class="fragment"><div class="line">make analyze</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Документация</h1>
+<p>HTML-документация генерируется через Doxygen:</p>
+<div class="fragment"><div class="line">make docs</div>
+</div><!-- fragment --><p>Эта команда запускает:</p>
+<div class="fragment"><div class="line">doxygen Doxyfile</div>
+</div><!-- fragment --><p>Готовая документация лежит в:</p>
+<div class="fragment"><div class="line">docs/html/index.html</div>
+</div><!-- fragment --><p>Откройте этот файл в браузере из каталога <code>06_distributed_integral</code>. Очистить сгенерированный HTML можно командой:</p>
+<div class="fragment"><div class="line">make clean-docs</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
+Security Flags</h1>
+<p>Обычная GCC-сборка использует набор защитных флагов:</p>
+<ul>
+<li><code>-Wall</code>, <code>-Wextra</code>, <code>-Wpedantic</code>, <code>-Werror</code>: включают строгие предупреждения и превращают их в ошибки сборки.</li>
+<li><code>-fwrapv</code>: задаёт предсказуемое переполнение signed integer по модулю.</li>
+<li><code>-fwrapv-pointer</code>: задаёт GCC-семантику wrapping для арифметики указателей.</li>
+<li><code>-fno-strict-aliasing</code>: отключает оптимизации, основанные на строгих aliasing-правилах.</li>
+<li><code>-fno-delete-null-pointer-checks</code>: запрещает удалять проверки на <code>NULL</code> после разыменования.</li>
+<li><code>-D_FORTIFY_SOURCE=2</code>: включает дополнительные проверки libc для некоторых функций работы с памятью и строками.</li>
+<li><code>-fstack-protector-strong</code>: добавляет stack canary для защиты от части переполнений стека.</li>
+<li><code>-fPIE</code>, <code>-pie</code>: собирают position independent executable, пригодный для ASLR.</li>
+<li><code>-fPIC</code>: генерирует position independent code.</li>
+<li><code>-Wclobbered</code>, <code>-Warray-bounds</code>, <code>-Wdiv-by-zero</code>, <code>-Wshift-count-negative</code>, <code>-Wshift-count-overflow</code>: включают дополнительные проверки подозрительных конструкций.</li>
+</ul>
+<p><code>-O2</code> включён потому, что <code>_FORTIFY_SOURCE=2</code> требует оптимизации для полноценной работы. В Clang-сборке не используются GCC-only флаги <code>-fwrapv-pointer</code> и <code>-Wclobbered</code>.</p>
+<p>Пример вручную:</p>
+<div class="fragment"><div class="line">./build/integral 0 0 3.141592653589793 1000 3</div>
+</div><!-- fragment --><p>Аргументы <code>integral</code>:</p>
+<div class="fragment"><div class="line">integral &lt;func-id&gt; &lt;x-begin&gt; &lt;x-end&gt; &lt;num-points&gt; &lt;num-clients&gt; [port [client-cores...]]</div>
+</div><!-- fragment --><p><code>func-id</code>: <code>0</code> для <code>sin(x)</code>, <code>1</code> для <code>cos(x)</code>, <code>2</code> для <code>x*x</code>.</p>
+<p>Если нужно задать разное число ядер у worker, после порта передаётся ровно <code>num-clients</code> чисел:</p>
+<div class="fragment"><div class="line">./build/integral 0 0 3.141592653589793 1000 4 1338 4 8 4 4</div>
+</div><!-- fragment --><p>Здесь запускаются 4 клиента с весами <code>4</code>, <code>8</code>, <code>4</code>, <code>4</code>.</p>
+<p>Для отдельного запуска <code>client</code> доступны дополнительные таймауты:</p>
+<div class="fragment"><div class="line">client &lt;host&gt; &lt;port&gt; &lt;cores&gt; &lt;worker-id&gt; &lt;connect-timeout-ms&gt; &lt;compute-timeout-ms&gt;</div>
+</div><!-- fragment --><p><code>connect-timeout-ms</code> ограничивает ожидание подключения к server. <code>compute-timeout-ms</code> ограничивает время локального вычисления worker-а; если вычисление заняло больше времени, worker завершается с ошибкой и не отправляет результат.</p>
+<p>Для отдельного запуска <code>server</code> доступен общий таймаут:</p>
+<div class="fragment"><div class="line">server &lt;points-file&gt; &lt;num-clients&gt; &lt;port&gt; &lt;server-timeout-ms&gt;</div>
+</div><!-- fragment --><p><code>server-timeout-ms</code> ограничивает время ожидания подключений и результатов от worker-ов. На подключённых TCP-сокетах также включается <code>SO_KEEPALIVE</code>, но быстрые отказы в тестах отслеживаются именно прикладными таймаутами.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Запуск с внешними worker</h1>
+<p><code>integral2</code> не создаёт worker-ы сам. Он генерирует файл точек и запускает только <code>server</code>, поэтому worker-ы должны быть запущены заранее.</p>
+<p>Готовый сценарий:</p>
+<div class="fragment"><div class="line">make test</div>
+</div><!-- fragment --><p>Таймауты для автоматических тестов задаются переменными Makefile:</p>
+<div class="fragment"><div class="line">make test CONNECT_TIMEOUT_MS=5000 COMPUTE_TIMEOUT_MS=5000 SERVER_TIMEOUT_MS=5000 FAIL_TIMEOUT_MS=200</div>
+</div><!-- fragment --><p>По умолчанию обычные сценарии используют <code>120000</code> мс, а тесты “не дождался” используют <code>FAIL_TIMEOUT_MS=300</code> мс.</p>
+<p>Скрипт <code>run_integral2_test.sh</code> сначала запускает клиентов, потом запускает <code>integral2</code>.</p>
+<p><code>make test</code> также запускает сценарии отказа:</p>
+<ul>
+<li><code>run_failure_test.sh worker ...</code>: один worker завершается после получения задачи; server детектирует отсутствие результата, но остальные worker-ы успевают досчитать, отправить результат и получить финальное подтверждение.</li>
+<li><code>run_failure_test.sh server ...</code>: server завершается после рассылки задач; worker-ы завершаются с ошибкой при ожидании финального подтверждения.</li>
+<li><code>tests/run_library_failure_test.sh worker ...</code>: запускает worker-ы через <code>build/library_workers</code>, а server через <code>build/library_server</code>; обе программы линкуются с <code>build/libdistributed_integral.a</code>. При отказе одного worker-а остальные worker-ы завершают вычисления, отправляют результаты серверу и получают финальное подтверждение, а server возвращает ошибку из-за отсутствующего результата.</li>
+<li><code>tests/run_library_failure_test.sh server ...</code>: проверяет отказ server-а после рассылки задач. Все worker-ы завершаются с ошибкой, потому что не получают финальное подтверждение.</li>
+<li><code>tests/run_timeout_test.sh client ...</code>: проверяет, что client завершается с ошибкой, если не дождался подключения к server.</li>
+<li><code>tests/run_timeout_test.sh server ...</code>: проверяет, что server завершается с ошибкой, если не дождался подключения worker-ов.</li>
+</ul>
+<p>Для fault-injection используются env-переменные:</p>
+<ul>
+<li><code>INTEGRAL_FAIL_WORKER_ID=&lt;id&gt;</code> для отказа конкретного worker после получения задачи.</li>
+<li><code>INTEGRAL_FAIL_SERVER_AFTER_TASKS=1</code> для отказа server после рассылки задач.</li>
+</ul>
+<p>Пример вручную:</p>
+<div class="fragment"><div class="line">./build/client 127.0.0.1 1338 1 0 120000 120000 &amp;</div>
+<div class="line">./build/client 127.0.0.1 1338 1 1 120000 120000 &amp;</div>
+<div class="line">./build/client 127.0.0.1 1338 1 2 120000 120000 &amp;</div>
+<div class="line">./build/integral2 0 0 3.141592653589793 30000000 3 1338</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
