@@ -124,12 +124,14 @@ test: default
 	$(TEST_ENV) ./run_integral2_test.sh 0 0 3.141592653589793 1000000 1338 1 1 1
 	$(TEST_ENV) ./run_integral2_test.sh 0 0 3.141592653589793 1000000 1338 2 2 2
 	$(TEST_ENV) ./run_integral2_test.sh 0 0 3.141592653589793 1000000 1338 4 4 4
-	$(TEST_ENV) ./run_failure_test.sh worker 1340 1000000 1
-	$(TEST_ENV) ./run_failure_test.sh server 1341 1000000 1
-	$(TEST_ENV) ./tests/run_library_failure_test.sh worker 1342 100000 1
-	$(TEST_ENV) ./tests/run_library_failure_test.sh server 1343 100000 1
-	$(TEST_ENV) ./tests/run_timeout_test.sh client 1344
-	$(TEST_ENV) ./tests/run_timeout_test.sh server 1345
+	$(TEST_ENV) ./run_integral2_test.sh 1 0 1.5707963267948966 1000000 1339 1 1 1
+	$(TEST_ENV) ./run_integral2_test.sh 2 0 1 1000000 1340 1 1 1
+	$(TEST_ENV) ./run_failure_test.sh worker 1341 1000000 1
+	$(TEST_ENV) ./run_failure_test.sh server 1342 1000000 1
+	$(TEST_ENV) ./tests/run_library_failure_test.sh worker 1343 100000 1
+	$(TEST_ENV) ./tests/run_library_failure_test.sh server 1344 100000 1
+	$(TEST_ENV) ./tests/run_timeout_test.sh client 1345
+	$(TEST_ENV) ./tests/run_timeout_test.sh server 1346
 
 docs:
 	doxygen Doxyfile

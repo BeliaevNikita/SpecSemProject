@@ -1,12 +1,12 @@
 server: invalid result from worker 1
-server: listening on port 1342, need 3 workers
+server: listening on port 1343, need 3 workers
 server: worker 0 connected, cores=1
-server: worker 1 connected, cores=1
 server: worker 2 connected, cores=1
+server: worker 1 connected, cores=1
 server: sent task 0 [0, 33333)
 server: sent task 1 [33333, 66666)
 server: sent task 2 [66666, 99999)
 server: result task 0 = 0.499986396328
 server: result task 2 = 0.500013603590
 Integral = 0.999999999918
-server: elapsed time = 0.027201 sec
+server: elapsed time = 0.002523 sec
